@@ -1,14 +1,19 @@
 ---
 title: Accès & contact
-description: Adresse, accès et coordonnées de l'Élan Gymnique de Vauréal.
+description: Adresse, accès et coordonnées de l'Élan Gymnique de Vauréal — Gymnase de la Bussie, Vauréal (95490).
 ---
 
-**Élan Gymnique de Vauréal**
-Vauréal (95490)
+## Où nous trouver
 
-- **Email :** _à compléter_
-- **Téléphone :** _à compléter_
+**Gymnase de la Bussie**
+Rue de la Gerbe d'Or
+95490 Vauréal
 
-Pour toute question sur les inscriptions, l'utilisation du créneau d'essai ou la vie du club, contactez-nous par email ou via notre page Facebook.
+_Salle de gymnastique au 1er étage._
 
-> Adresse exacte, email et téléphone à extraire du site actuel (page « Accès et contact ») et à confirmer avec le board.
+## Nous contacter
+
+- **Email :** elangymvaureal@gmail.com
+- **Facebook :** [Élan Gymnique de Vauréal](https://www.facebook.com/ElanGymniquedeVaureal)
+
+Pour toute question sur les inscriptions, la liste d'attente ou la semaine portes ouvertes, contactez-nous par email ou via notre page Facebook.

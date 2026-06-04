@@ -3,6 +3,10 @@ title: Notre salle
 description: Une salle spécialisée, équipée pour la pratique de la gymnastique en toute sécurité.
 ---
 
-Le club dispose d'une **salle spécialisée** équipée du matériel nécessaire à la pratique de la gymnastique : praticable, agrès, tapis et zones d'évolution sécurisées pour tous les âges.
+## Une salle spécialisée pour évoluer en toute sécurité
 
-> Texte et photos à extraire du site actuel (page « Notre salle ») — à compléter par l'agence et valider avec le board.
+Notre club bénéficie d'une salle toute équipée avec les **agrès féminins** (saut, barres asymétriques, poutre et sol) et les **agrès masculins** (saut, barre fixe, barres parallèles, anneaux, cheval d'arçon et sol).
+
+Des investissements sont réalisés régulièrement afin d'entretenir et de renouveler le matériel, pour que chaque gymnaste progresse dans les meilleures conditions.
+
+Les cours ont lieu au **Gymnase de la Bussie** (salle au 1er étage), rue de la Gerbe d'Or à Vauréal. Retrouvez le plan d'accès sur la page [Accès & contact](/acces-contact).

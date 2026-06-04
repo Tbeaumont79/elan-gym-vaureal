@@ -1,27 +1,53 @@
-# Créneaux horaires — éditable via Nuxt Studio.
-# Données à extraire de la page « Horaires » du site actuel et à valider avec le board.
+# Créneaux horaires — saison 2026-2027 — éditable via Nuxt Studio.
+# ⚠️ Créneaux PRÉVISIONNELS : les jours et horaires définitifs seront confirmés après
+# validation des disponibilités des salles par la mairie et selon le nombre d'inscriptions.
+# Tarifs (cotisation annuelle) indiqués dans le libellé d'activité faute de colonne dédiée.
 creneaux:
-  - activite: Petite enfance (2-4 ans)
-    jour: à compléter
-    heure: à compléter
-    public: 2-4 ans
-  - activite: École de gym (5-6 ans)
-    jour: à compléter
-    heure: à compléter
-    public: 5-6 ans
-  - activite: Loisirs
-    jour: à compléter
-    heure: à compléter
-    public: dès 7 ans
-  - activite: Pré-compétition
-    jour: à compléter
-    heure: à compléter
-    public: dès 7 ans
-  - activite: Compétition
-    jour: à compléter
-    heure: à compléter
-    public: dès 7 ans
-  - activite: Adultes
-    jour: à compléter
-    heure: à compléter
-    public: Adultes
+  - activite: Quatre-pattes — 150 €/an
+    jour: Mercredi après-midi ou Samedi
+    heure: 15h-16h (1h)
+    public: Nés en 2024, avec un parent
+  - activite: Baby-Gym — nés en 2023
+    jour: Lundi ou Samedi
+    heure: 17h30-18h30 ou 13h-14h (1h)
+    public: 3 ans
+  - activite: Baby-Gym — nés en 2022
+    jour: Jeudi ou Samedi
+    heure: 17h30-18h30 ou 14h-15h (1h)
+    public: 4 ans
+  - activite: École de gym Filles — 210 €/an
+    jour: Mercredi après-midi
+    heure: Cours d'1h30
+    public: Filles nées en 2020-2021
+  - activite: École de gym Garçons — 210 €/an
+    jour: Mercredi après-midi
+    heure: 17h-18h30 (1h30)
+    public: Garçons nés en 2020-2021
+  - activite: Loisir Filles — 210 €/an
+    jour: 1 soir/semaine ou samedi-dimanche
+    heure: 18h30-20h30 (jour défini à la rentrée)
+    public: Filles nées en 2019 et avant
+  - activite: Loisir Garçons — 210 €/an
+    jour: Mardi
+    heure: 18h30-20h30 (2h)
+    public: Garçons nés entre 2011 et 2019
+  - activite: Compétition Filles — 260 à 350 €/an
+    jour: 2 à 3 soirs/semaine
+    heure: 18h30-20h30 (entrée sur test)
+    public: Filles nées en 2019 et avant
+  - activite: Compétition Garçons — entrée sur test
+    jour: Mardi
+    heure: 18h30-20h30
+    public: Garçons à partir de 2019
+  - activite: Adultes Loisir — 175 €/an
+    jour: Mardi soir
+    heure: 20h45-22h15
+    public: 16 ans et +
+  - activite: Adultes Pratique libre
+    jour: Mardi soir
+    heure: 20h45-22h15
+    public: 18 ans et +
+  - activite: Adultes Compétition
+    jour: Deux soirs/semaine + samedi
+    heure: À confirmer
+    public: 16 ans et +

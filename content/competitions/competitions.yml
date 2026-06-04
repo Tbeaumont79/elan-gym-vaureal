@@ -1,7 +1,40 @@
-# Dates de compétitions — éditable via Nuxt Studio.
-# À extraire de la page « Dates des compétitions » du site actuel et à mettre à jour chaque saison.
+# Dates de compétitions — saison 2025-2026 (source MAJ : 14/11/2025) — éditable via Nuxt Studio.
+# Planning Féminin. Lorsque deux week-ends sont proposés pour un même niveau, la répartition
+# des équipes est gérée par la fédération et communiquée ultérieurement.
 dates:
-  - date: à compléter
-    intitule: Compétition (intitulé à compléter)
-    lieu: à compléter
-    niveau: à compléter
+  - date: 24-25 janvier 2026
+    intitule: Compétition départementale (1er week-end)
+    lieu: Pontoise — Hall omnisports Philippe Hémet, 1 rue Pierre de Coubertin
+    niveau: Féminin — répartition fédérale
+  - date: 7-8 février 2026
+    intitule: Compétition départementale (2e week-end)
+    lieu: Eragny
+    niveau: Féminin — répartition fédérale
+  - date: Janvier 2026
+    intitule: Compétition départementale GAM
+    lieu: Dans le 78 (Yvelines)
+    niveau: Masculin
+  - date: 28-29 mars ou 4-5 avril 2026
+    intitule: Compétition régionale
+    lieu: Gargenville (4-5 avril) — lieu du 28-29 mars non connu
+    niveau: Niveaux 6/5
+  - date: 11-12 avril 2026
+    intitule: Compétition régionale
+    lieu: Eragny
+    niveau: Niveaux 7/8
+  - date: 9-10 mai 2026
+    intitule: Demi-finales
+    lieu: Rungis (94) et Morangis-Chilly
+    niveau: Dès le Niveau 6 — catégories 11-15, 11-16, 11 ans et +
+  - date: 23-24-25 mai 2026
+    intitule: Finales Jeunes
+    lieu: Lambersart (59)
+    niveau: Niveaux 8, 7 et 6 — catégories 7/10, 7/12, 7/13 ans
+  - date: 6-7 juin 2026
+    intitule: Finales nationales
+    lieu: Clermont-Ferrand (63)
+    niveau: Dès le Niveau 6 — catégories 11-15, 11-16, 11 ans et +
+  - date: À confirmer
+    intitule: Coupe régionale
+    lieu: Non connu à ce jour
+    niveau: Pré-compétitions et niveaux régionaux

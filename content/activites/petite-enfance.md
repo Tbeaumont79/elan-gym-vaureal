@@ -1,16 +1,21 @@
 ---
-title: Petite enfance
+title: Petite enfance — Quatre-pattes & Baby-Gym
 age: 2-4 ans
 order: 1
-description: Éveil moteur des tout-petits (quatre-pattes 2 ans et baby-gym 3-4 ans).
-horaire: à compléter
+description: Découvrir la gym en s'amusant — éveil moteur des tout-petits, de 2 à 4 ans.
+horaire: Créneaux prévisionnels — voir la page Horaires
 ---
 
-La **petite enfance** regroupe l'éveil des tout-petits :
+## Découvrir la gym en s'amusant
 
-- **Quatre-pattes (2 ans)** : éveil moteur accompagné, découverte du mouvement et de la motricité.
-- **Baby-gym (3-4 ans)** : parcours ludiques, équilibre, coordination et premières acrobaties en toute sécurité.
+Votre enfant aime bouger, grimper, sauter ? Dès que la marche est acquise (environ 1 an et demi - 2 ans), il peut rejoindre la section **Quatre-pattes**. Ce cours se fait **avec les parents** : un moment privilégié à partager ensemble, dans un cadre sécurisé et ludique.
 
-L'enfant développe sa motricité, sa confiance et sa socialisation dans un cadre adapté à son âge.
+À partir de **3 ans**, place à la **Baby-Gym** ! Votre enfant gagne en autonomie et participe seul au cours. Chaque séance commence par un petit échauffement sous forme de jeu, suivi d'un parcours avec modules en mousse, trampoline et mini-agrès (mini-barres, mini-poutres, mini-anneaux…).
 
-> Texte à affiner à partir du site actuel (pages « Quatre-pattes » et « Baby-Gym »).
+Dès **4 ans**, après quelques mois de parcours ludiques, les enfants découvrent la pratique aux agrès pour « faire comme les grands ».
+
+### Objectifs
+
+- Développer la motricité, la coordination et l'équilibre.
+- Découvrir les toutes premières bases de la gymnastique.
+- Donner confiance aux enfants dans leurs mouvements.

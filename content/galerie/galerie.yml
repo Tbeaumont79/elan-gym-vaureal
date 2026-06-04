@@ -1,5 +1,13 @@
 # Galerie — éditable via Nuxt Studio.
-# Photos : ajouter des fichiers dans /public/galerie puis référencer le chemin.
-# Vidéos : coller l'URL YouTube (ou autre) ; l'embed est généré automatiquement.
+# Photos : ajouter des fichiers dans /public/galerie puis référencer le chemin (src + legende).
+# Vidéos : coller l'URL YouTube ; l'embed est généré automatiquement.
+#
+# ÉTAT À L'EXTRACTION (2026-06-04) :
+# - Le site actuel n'a PAS de galerie photos. Les seules images disponibles sont en basse
+#   résolution / banque d'images / captures d'écran (voir content-extract/GAPS_ET_ASSETS_PAUVRES.md).
+#   → Aucune photo intégrée ici en attendant des visuels HD fournis par le club (avenant).
+# - Une seule vidéo existe (Finales Jeunes de Cergy) mais elle est bloquée derrière le bandeau
+#   cookies du site et son URL YouTube n'a pas pu être récupérée automatiquement.
+#   → À fournir par le club si l'on souhaite l'intégrer (coller l'URL YouTube ci-dessous).
 photos: []
 videos: []
