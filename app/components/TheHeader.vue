@@ -75,17 +75,17 @@ watch(() => route.path, () => (open.value = false))
   font-weight: 700;
 }
 /* Pastille blanche : le logo officiel (noir + teal, fond transparent) a besoin d'un
-   fond clair pour rester lisible sur l'en-tête navy. */
+   fond clair pour rester lisible sur l'en-tête navy. La pastille épouse le logo. */
 .brand__mark {
-  display: grid;
-  place-items: center;
-  height: 48px;
-  padding: 5px 8px;
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 9px;
   border-radius: var(--radius-sm);
   background: #fff;
 }
 .brand__mark img {
-  height: 100%;
+  display: block;
+  height: 38px;
   width: auto;
 }
 .brand__name { font-size: 0.95rem; line-height: 1.1; }
