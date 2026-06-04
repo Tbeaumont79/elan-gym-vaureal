@@ -10,7 +10,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "typecheck": "nuxt typecheck"
+    "typecheck": "nuxt typecheck",
+    "deploy": "nuxt generate && npx -y gh-pages@6 --dotfiles -d .output/public -b gh-pages -m \"deploy: static build [skip ci]\""
   },
   "dependencies": {
     "@nuxt/content": "^3.14.0",

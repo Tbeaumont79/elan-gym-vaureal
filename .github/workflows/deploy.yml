@@ -1,23 +1,28 @@
 name: Deploy to GitHub Pages
 
+# Stratégie (Lot 1 / THI-9) : la source GitHub Pages est réglée sur la BRANCHE `gh-pages`
+# (build « pages build and deployment » géré par GitHub). On construit ici le site puis on
+# pousse `.output/public` sur `gh-pages` ; GitHub publie ensuite automatiquement.
+#
+# Pourquoi pas actions/deploy-pages (source « GitHub Actions ») ? Le compte est verrouillé
+# pour facturation → les workflows Actions ne démarrent pas, ALORS QUE le build par branche,
+# lui, n'est pas affecté et sert le site. Ce workflow se réactivera tout seul à la
+# régularisation de la facturation ; d'ici là, déploiement manuel via `pnpm run deploy`.
+
 on:
   push:
     branches: [main]
   workflow_dispatch:
 
-# Permissions nécessaires au déploiement GitHub Pages.
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write # nécessaire pour pousser sur la branche gh-pages
 
-# Un seul déploiement à la fois.
 concurrency:
-  group: pages
+  group: pages-deploy
   cancel-in-progress: true
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -43,19 +48,11 @@ jobs:
           # l'inclure ici aussi doublerait le chemin dans le sitemap (.../<repo>/<repo>/...).
           NUXT_PUBLIC_SITE_URL: https://${{ github.repository_owner }}.github.io
 
-      - uses: actions/configure-pages@v5
-
-      - uses: actions/upload-pages-artifact@v3
+      - name: Publish to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          path: .output/public
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./.output/public
+          publish_branch: gh-pages
+          # Le preset Nitro github_pages génère déjà .nojekyll ; on garde les dotfiles.
+          enable_jekyll: false
