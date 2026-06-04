@@ -43,7 +43,10 @@ export const useNavigation = (): NavItem[] => [
   { label: 'Galerie', to: '/galerie' },
 ]
 
-/** Lien sortant HelloAsso (adhésions/paiements — hors périmètre vitrine). */
+/**
+ * Lien sortant HelloAsso (adhésions/paiements — hors périmètre vitrine).
+ * URL vérifiée le 2026-06-04 (recherche web — page officielle du club). Confirmée.
+ */
 export const HELLOASSO_URL =
   'https://www.helloasso.com/associations/elan-gymnique-de-vaureal'
 

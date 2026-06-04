@@ -8,9 +8,10 @@ useSeoMeta({
   description: "Adresse, accès et contact de l'Élan Gymnique de Vauréal à Vauréal (95).",
 })
 
-// Carte OpenStreetMap (embed, sans clé API). Coordonnées À CONFIRMER avec le club.
+// Carte OpenStreetMap (embed, sans clé API). Coordonnées du Gymnase de la Bussie
+// vérifiées via Nominatim/OSM : 49.0313386, 2.0198829.
 const osmSrc =
-  'https://www.openstreetmap.org/export/embed.html?bbox=2.02%2C49.03%2C2.06%2C49.05&layer=mapnik&marker=49.04%2C2.04'
+  'https://www.openstreetmap.org/export/embed.html?bbox=2.0099%2C49.0263%2C2.0299%2C49.0363&layer=mapnik&marker=49.0313386%2C2.0198829'
 </script>
 
 <template>
@@ -25,7 +26,7 @@ const osmSrc =
         </div>
         <div class="acces__map">
           <iframe :src="osmSrc" title="Carte d'accès" loading="lazy"></iframe>
-          <p class="acces__note">Localisation indicative — à ajuster avec l'adresse exacte du club.</p>
+          <p class="acces__note">Gymnase de la Bussie, rue de la Gerbe d'Or, 95490 Vauréal.</p>
         </div>
       </div>
     </section>
