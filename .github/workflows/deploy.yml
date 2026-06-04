@@ -39,7 +39,9 @@ jobs:
         env:
           # baseURL = /<repo>/ pour GitHub Pages projet. Adapter si domaine custom (avenant).
           NUXT_APP_BASE_URL: /${{ github.event.repository.name }}/
-          NUXT_PUBLIC_SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+          # site.url = origine SEULE. Le sous-chemin /<repo>/ vient de baseURL ;
+          # l'inclure ici aussi doublerait le chemin dans le sitemap (.../<repo>/<repo>/...).
+          NUXT_PUBLIC_SITE_URL: https://${{ github.repository_owner }}.github.io
 
       - uses: actions/configure-pages@v5
 

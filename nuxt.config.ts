@@ -1,4 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
+// Sous-chemin d'hébergement (GitHub Pages projet : /<repo>/). Surchargeable pour un domaine custom.
+const baseURL = process.env.NUXT_APP_BASE_URL || '/elan-gym-vaureal/'
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-01-01',
   devtools: { enabled: true },
@@ -18,11 +22,18 @@ export default defineNuxtConfig({
   // Sous-chemin d'hébergement (GitHub Pages projet : https://<user>.github.io/<repo>/).
   // Surchargeable via NUXT_APP_BASE_URL pour un futur déploiement sur domaine custom (= avenant).
   app: {
-    baseURL: process.env.NUXT_APP_BASE_URL || '/elan-gym-vaureal/',
+    baseURL,
     head: {
       htmlAttrs: { lang: 'fr' },
       // Favicon défini dans app.vue pour respecter le baseURL (sous-chemin GitHub Pages).
     },
+  },
+
+  // SEO : sitemap. crawlLinks (preset Pages) découvre le lien d'accueil sous sa forme
+  // préfixée par le baseURL et l'enregistre comme route « /<repo> » ; on l'exclut pour
+  // éviter une entrée doublonnée (.../<repo>/<repo>). Vide et inerte sur domaine custom (baseURL = '/').
+  sitemap: {
+    exclude: [baseURL.replace(/\/$/, '')].filter(Boolean),
   },
 
   // Identité du site (SEO de base). url = origine seule ; le sous-chemin vient de app.baseURL.
