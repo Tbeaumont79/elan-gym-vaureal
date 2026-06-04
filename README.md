@@ -10,7 +10,7 @@ Projet pilote n°1 de l'agence. Périmètre : **vitrine uniquement** — la gest
 - **@nuxt/content** v3 : contenu en fichiers Markdown/YAML versionnés dans Git.
 - **Nuxt Studio** : édition visuelle du contenu par l'association (voir `GUIDE-EDITION.md`).
 - **@nuxtjs/seo** : SEO de base (sitemap, meta, OpenGraph).
-- Hébergement : **GitHub Pages** (gratuit), sous-chemin `/<repo>/`.
+- Hébergement cible : **Cloudflare Pages** (gratuit, CI auto sur push) ; GitHub Pages comme hôte de transition. Voir [Déploiement](#déploiement).
 
 ## Démarrer en local
 
@@ -71,23 +71,44 @@ Deux variables d'environnement pilotent les URLs ; aucune autre adaptation n'est
 > ⚠️ `NUXT_PUBLIC_SITE_URL` ne contient **que l'origine** (pas le sous-chemin). Le sous-chemin vient de
 > `NUXT_APP_BASE_URL` ; le mettre aux deux endroits doublerait les URLs du sitemap.
 
-### Option par défaut — GitHub Pages
+### Hébergement cible — Cloudflare Pages (CI auto, recommandé)
 
-Automatique via **GitHub Actions** (`.github/workflows/deploy.yml`) à chaque push sur `main`.
-Prérequis (une fois) : **Settings → Pages → Source : GitHub Actions**.
-URL : `https://<owner>.github.io/<repo>/`.
+Standard agence pour les vitrines statiques. **Cloudflare build le site à chaque push sur `main`**, sur son
+infrastructure, **sans GitHub Actions** — donc insensible au verrou de facturation du compte GitHub perso
+(GitHub ne sert que la source). `wrangler.toml` fixe déjà le dossier de sortie.
 
-### Option de repli — Cloudflare Pages (envoi direct du build)
+Mise en place (une fois, tableau de bord Cloudflare — nécessite un compte Cloudflare) :
 
-Retenue par le CTO pour le go-live du pilote tant que le compte GitHub est verrouillé (facturation, voir THI-16).
-Indépendant de GitHub Actions :
+1. **Workers & Pages → Create → Pages → Connect to Git** → choisir le dépôt `Tbeaumont79/elan-gym-vaureal`.
+2. **Build settings** :
+   - Framework preset : **Nuxt.js** (ou « None »)
+   - Build command : `pnpm generate`
+   - Build output directory : `.output/public`
+   - Root directory : `/`
+3. **Variables d'environnement** (Production) :
+   - `NUXT_APP_BASE_URL` = `/`
+   - `NUXT_PUBLIC_SITE_URL` = `https://elan-gym-vaureal.pages.dev`
+   - `NODE_VERSION` = `22`
+4. **Save and Deploy** → URL : `https://elan-gym-vaureal.pages.dev` (auto-redéployée à chaque push).
+
+Build vérifié en local avec ces variables : **38 routes pré-rendues, 0 erreur**, liens servis à la racine.
+
+### Repli / CI alternative — envoi direct (Wrangler)
+
+Sans connexion Git, pour un déploiement ponctuel (nécessite `CLOUDFLARE_API_TOKEN` + account id) :
 
 ```bash
-NUXT_APP_BASE_URL=/ NUXT_PUBLIC_SITE_URL=https://<projet>.pages.dev pnpm generate
-npx wrangler pages deploy .output/public --project-name <projet>
+NUXT_APP_BASE_URL=/ NUXT_PUBLIC_SITE_URL=https://elan-gym-vaureal.pages.dev pnpm generate
+npx wrangler pages deploy .output/public --project-name elan-gym-vaureal
 ```
 
 (ou glisser-déposer `.output/public` dans le tableau de bord Cloudflare Pages). Offre gratuite suffisante.
+
+### GitHub Pages (hôte actuel, conservé le temps de la bascule)
+
+Le site est **en ligne** sur GitHub Pages (branche `gh-pages`, publication gérée par GitHub, non affectée par le
+verrou). La CI Actions (`.github/workflows/deploy.yml`, base `/<repo>/`) reste désactivée tant que le compte est
+verrouillé (THI-16). On conserve cette URL jusqu'à validation de la bascule Cloudflare.
 
 > **Domaine custom plus tard** : `NUXT_APP_BASE_URL=/` + `NUXT_PUBLIC_SITE_URL=https://<domaine>` et rattacher le domaine chez l'hébergeur. Tâche ultérieure (avenant).
 
