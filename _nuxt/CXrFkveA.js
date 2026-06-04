@@ -1,0 +1,1 @@
+import{_ as o}from"./CQshfD__.js";import{_ as e}from"./DlAUqK2U.js";import{K as n,c as r}from"./yQiKhR1h.js";import"./B18943T3.js";import"./ChzShIQc.js";import"./CnmQ0xem.js";import"./C6uTS-pd.js";const c={};function p(_,m){const t=o;return r(),n(t,{path:"/pages/equipement"})}const l=e(c,[["render",p]]);export{l as default};

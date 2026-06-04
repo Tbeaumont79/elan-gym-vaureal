@@ -1,1 +1,0 @@
-import{_ as r}from"./DlAUqK2U.js";import{c as o,e as s,W as t}from"./GTp_Lfbi.js";const n={};function c(e,a){return o(),s("th",null,[t(e.$slots,"default")])}const f=Object.assign(r(n,[["render",c]]),{__name:"ProseTh"});export{f as default};
