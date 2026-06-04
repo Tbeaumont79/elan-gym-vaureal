@@ -23,11 +23,8 @@ const year = 2026
     <div class="site-footer__bar">
       <div class="container">
         <span>© {{ year }} Élan Gymnique de Vauréal</span>
-        <span v-if="AGENCY.name">
-          Réalisé par
-          <a v-if="AGENCY.url" :href="AGENCY.url" target="_blank" rel="noopener">{{ AGENCY.name }}</a>
-          <template v-else>{{ AGENCY.name }}</template>
-        </span>
+        <!-- Crédit d'agence retiré pour le pilote (décision THI-15/THI-25, repli sans crédit).
+             Réversible : rebrancher la mention une fois la marque arrêtée. -->
       </div>
     </div>
   </footer>
