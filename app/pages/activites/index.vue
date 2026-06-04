@@ -8,6 +8,9 @@ useSeoMeta({
   description:
     "Toutes les activités de l'Élan Gymnique de Vauréal : baby-gym, école de gym, loisir, pré-compétition, compétition et adultes.",
 })
+
+// Visuel d'ambiance (illustration neutre) déduit du slug de l'activité.
+const visuel = (path?: string) => useActiviteImage((path || '').split('/').pop() || '')
 </script>
 
 <template>
@@ -20,6 +23,11 @@ useSeoMeta({
       <div class="container">
         <div class="grid grid--3">
           <NuxtLink v-for="a in activites" :key="a.path" :to="a.path" class="card activity-card">
+            <AmbianceImage
+              :name="visuel(a.path).name"
+              :alt="visuel(a.path).alt"
+              class="activity-card__media"
+            />
             <div class="card__body">
               <span class="activity-card__age">{{ a.age }}</span>
               <h3>{{ a.title }}</h3>
@@ -34,8 +42,9 @@ useSeoMeta({
 </template>
 
 <style scoped>
-.activity-card { text-decoration: none; color: inherit; transition: transform 0.12s ease; }
+.activity-card { text-decoration: none; color: inherit; transition: transform 0.12s ease; overflow: hidden; }
 .activity-card:hover { transform: translateY(-3px); }
+.activity-card__media { aspect-ratio: 4 / 3; background: var(--c-bg-soft); }
 .activity-card__age {
   display: inline-block; background: var(--c-accent); color: #fff; font-size: 0.8rem;
   font-weight: 700; padding: 0.15rem 0.6rem; border-radius: 999px; margin-bottom: 0.5rem;

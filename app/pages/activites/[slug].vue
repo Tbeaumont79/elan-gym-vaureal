@@ -15,11 +15,17 @@ useSeoMeta({
   title: () => page.value?.title,
   description: () => page.value?.description,
 })
+
+// Visuel d'ambiance (illustration neutre) associé à l'activité courante.
+const visuel = computed(() => useActiviteImage(slug.value))
 </script>
 
 <template>
   <div v-if="page">
     <PageHeader :title="page.title" :subtitle="`${page.age} · ${page.description}`" />
+    <div class="container">
+      <AmbianceImage :name="visuel.name" :alt="visuel.alt" class="activite__media" />
+    </div>
     <section class="section">
       <div class="container activite">
         <div class="prose">
@@ -39,4 +45,11 @@ useSeoMeta({
 
 <style scoped>
 .activite__horaire { background: var(--c-bg-soft); padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--c-border); }
+.activite__media {
+  margin-top: clamp(1.5rem, 4vw, 2.5rem);
+  aspect-ratio: 16 / 6;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--c-border);
+}
 </style>

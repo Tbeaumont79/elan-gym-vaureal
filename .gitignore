@@ -30,3 +30,7 @@ elan-gym-vaureal/
 
 # Bundles/exports scratch
 *.zip
+
+# Sources brutes des visuels d'ambiance (JPEG Pexels) — seules les versions
+# optimisées public/images/ambiance/*.{webp,avif} sont versionnées (voir THI-30).
+.img-src/
