@@ -3,6 +3,9 @@ const nav = useNavigation()
 const open = ref(false)
 const route = useRoute()
 
+// Logo officiel servi depuis /public, préfixé par le baseURL (sous-chemin GitHub Pages).
+const base = useRuntimeConfig().app.baseURL
+
 // Ferme le menu mobile à chaque changement de page.
 watch(() => route.path, () => (open.value = false))
 </script>
@@ -11,7 +14,14 @@ watch(() => route.path, () => (open.value = false))
   <header class="site-header">
     <div class="container site-header__inner">
       <NuxtLink to="/" class="brand" @click="open = false">
-        <span class="brand__mark">ÉG</span>
+        <span class="brand__mark">
+          <img
+            :src="`${base}logo-egv.png`"
+            width="540"
+            height="282"
+            alt="Élan Gymnique de Vauréal"
+          />
+        </span>
         <span class="brand__name">Élan Gymnique<br />de Vauréal</span>
       </NuxtLink>
 
@@ -64,15 +74,19 @@ watch(() => route.path, () => (open.value = false))
   text-decoration: none;
   font-weight: 700;
 }
+/* Pastille blanche : le logo officiel (noir + teal, fond transparent) a besoin d'un
+   fond clair pour rester lisible sur l'en-tête navy. */
 .brand__mark {
   display: grid;
   place-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--c-accent);
-  color: #fff;
-  font-weight: 800;
+  height: 48px;
+  padding: 5px 8px;
+  border-radius: var(--radius-sm);
+  background: #fff;
+}
+.brand__mark img {
+  height: 100%;
+  width: auto;
 }
 .brand__name { font-size: 0.95rem; line-height: 1.1; }
 

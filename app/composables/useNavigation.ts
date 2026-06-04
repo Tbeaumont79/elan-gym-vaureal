@@ -52,3 +52,13 @@ export const HELLOASSO_URL =
 
 /** Réseaux sociaux. */
 export const FACEBOOK_URL = 'https://www.facebook.com/ElanGymniquedeVaureal'
+
+/**
+ * Crédit d'agence affiché dans le pied de page (contrepartie pilote).
+ * Décision de marque en attente (THI-15) : tant que `name` est `null`, la mention
+ * est masquée — on ne publie pas de placeholder visible. Pour l'activer, renseigner
+ * `name` (et `url` optionnel) ; c'est l'unique endroit à modifier.
+ */
+export const AGENCY: { name: string | null; url?: string } = {
+  name: null,
+}

@@ -23,7 +23,11 @@ const year = 2026
     <div class="site-footer__bar">
       <div class="container">
         <span>© {{ year }} Élan Gymnique de Vauréal</span>
-        <span>Réalisé par l'agence</span>
+        <span v-if="AGENCY.name">
+          Réalisé par
+          <a v-if="AGENCY.url" :href="AGENCY.url" target="_blank" rel="noopener">{{ AGENCY.name }}</a>
+          <template v-else>{{ AGENCY.name }}</template>
+        </span>
       </div>
     </div>
   </footer>

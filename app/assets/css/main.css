@@ -1,13 +1,15 @@
 /* =========================================================================
    Design tokens — Élan Gymnique de Vauréal
-   Palette provisoire extraite du site actuel (navy + teal), À CONFIRMER avec le board.
+   Couleurs verrouillées sur l'identité réelle (THI-20) :
+   - navy = navy du site actuel AssoConnect (#1d2c56)
+   - teal = teal échantillonné sur le logo officiel du club (EGV)
    ========================================================================= */
 :root {
   /* Couleurs de marque */
-  --c-primary: #1d2c56;        /* navy */
+  --c-primary: #1d2c56;        /* navy (site actuel) */
   --c-primary-dark: #13203f;
-  --c-accent: #24b39c;         /* teal */
-  --c-accent-dark: #1c8e7c;
+  --c-accent: #3d8882;         /* teal du logo officiel */
+  --c-accent-dark: #33716e;    /* teal foncé du logo (hover + liens, contraste AA) */
 
   /* Neutres */
   --c-bg: #ffffff;

@@ -60,14 +60,36 @@ Côté technique : le site se connecte à Studio via `content.preview.api` (vari
 
 ## Déploiement
 
-Automatique via **GitHub Actions** (`.github/workflows/deploy.yml`) à chaque push sur `main` :
-build `pnpm generate` → publication sur GitHub Pages.
+Le site est un build **statique** (`pnpm generate` → `.output/public/`), donc **agnostique de l'hébergeur**.
+Deux variables d'environnement pilotent les URLs ; aucune autre adaptation n'est nécessaire :
 
-Prérequis (une seule fois) : dans **Settings → Pages** du dépôt, choisir **Source : GitHub Actions**.
+| Variable               | Rôle                                              | GitHub Pages (projet)              | Cloudflare Pages / domaine racine |
+| ---------------------- | ------------------------------------------------- | ---------------------------------- | --------------------------------- |
+| `NUXT_APP_BASE_URL`    | sous-chemin de service                            | `/<repo>/`                         | `/`                               |
+| `NUXT_PUBLIC_SITE_URL` | origine du site (sitemap/SEO) — **origine seule** | `https://<owner>.github.io`        | `https://<projet>.pages.dev`      |
 
-URL de mise en ligne : `https://<owner>.github.io/<repo>/`.
+> ⚠️ `NUXT_PUBLIC_SITE_URL` ne contient **que l'origine** (pas le sous-chemin). Le sous-chemin vient de
+> `NUXT_APP_BASE_URL` ; le mettre aux deux endroits doublerait les URLs du sitemap.
 
-> **Domaine custom plus tard** : surcharger `NUXT_APP_BASE_URL=/` et `NUXT_PUBLIC_SITE_URL` + configurer le domaine dans Pages. Tâche ultérieure (avenant).
+### Option par défaut — GitHub Pages
+
+Automatique via **GitHub Actions** (`.github/workflows/deploy.yml`) à chaque push sur `main`.
+Prérequis (une fois) : **Settings → Pages → Source : GitHub Actions**.
+URL : `https://<owner>.github.io/<repo>/`.
+
+### Option de repli — Cloudflare Pages (envoi direct du build)
+
+Retenue par le CTO pour le go-live du pilote tant que le compte GitHub est verrouillé (facturation, voir THI-16).
+Indépendant de GitHub Actions :
+
+```bash
+NUXT_APP_BASE_URL=/ NUXT_PUBLIC_SITE_URL=https://<projet>.pages.dev pnpm generate
+npx wrangler pages deploy .output/public --project-name <projet>
+```
+
+(ou glisser-déposer `.output/public` dans le tableau de bord Cloudflare Pages). Offre gratuite suffisante.
+
+> **Domaine custom plus tard** : `NUXT_APP_BASE_URL=/` + `NUXT_PUBLIC_SITE_URL=https://<domaine>` et rattacher le domaine chez l'hébergeur. Tâche ultérieure (avenant).
 
 ## Conventions
 
