@@ -1,0 +1,5 @@
+# Galerie — éditable via Nuxt Studio.
+# Photos : ajouter des fichiers dans /public/galerie puis référencer le chemin.
+# Vidéos : coller l'URL YouTube (ou autre) ; l'embed est généré automatiquement.
+photos: []
+videos: []

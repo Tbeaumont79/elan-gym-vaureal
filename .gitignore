@@ -1,0 +1,32 @@
+# Nuxt
+.nuxt
+.output
+.data
+dist
+.nitro
+.cache
+
+# Dependencies
+node_modules
+
+# Logs
+*.log
+
+# Env / secrets — jamais committer
+.env
+.env.*
+!.env.example
+
+# Misc
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+
+# Matériel d'extraction (scratch — texte/images sources déjà repris dans content/)
+content-extract/
+
+# Lot 2 (design/composants) — scaffold séparé en cours, à fusionner dans app/ (voir THI-10)
+elan-gym-vaureal/
+
+# Bundles/exports scratch
+*.zip

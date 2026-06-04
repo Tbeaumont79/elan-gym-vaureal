@@ -1,0 +1,31 @@
+{
+  "name": "elan-gym-vaureal",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Site vitrine de l'Élan Gymnique de Vauréal — Nuxt + Nuxt Content + Nuxt Studio",
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "typecheck": "nuxt typecheck"
+  },
+  "dependencies": {
+    "@nuxt/content": "^3.14.0",
+    "@nuxtjs/sitemap": "^8.0.15",
+    "nuxt": "^4.4.7",
+    "vue": "^3.5.0",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "better-sqlite3": "^12.10.0",
+    "vue-tsc": "^2.2.0",
+    "typescript": "^5.7.0"
+  },
+  "packageManager": "pnpm@10.28.0",
+  "pnpm": {
+    "onlyBuiltDependencies": ["better-sqlite3", "esbuild", "sharp", "@parcel/watcher", "vue-demi"]
+  }
+}

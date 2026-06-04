@@ -1,0 +1,7 @@
+# Dates de compétitions — éditable via Nuxt Studio.
+# À extraire de la page « Dates des compétitions » du site actuel et à mettre à jour chaque saison.
+dates:
+  - date: à compléter
+    intitule: Compétition (intitulé à compléter)
+    lieu: à compléter
+    niveau: à compléter

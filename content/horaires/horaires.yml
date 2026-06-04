@@ -1,0 +1,27 @@
+# Créneaux horaires — éditable via Nuxt Studio.
+# Données à extraire de la page « Horaires » du site actuel et à valider avec le board.
+creneaux:
+  - activite: Petite enfance (2-4 ans)
+    jour: à compléter
+    heure: à compléter
+    public: 2-4 ans
+  - activite: École de gym (5-6 ans)
+    jour: à compléter
+    heure: à compléter
+    public: 5-6 ans
+  - activite: Loisirs
+    jour: à compléter
+    heure: à compléter
+    public: dès 7 ans
+  - activite: Pré-compétition
+    jour: à compléter
+    heure: à compléter
+    public: dès 7 ans
+  - activite: Compétition
+    jour: à compléter
+    heure: à compléter
+    public: dès 7 ans
+  - activite: Adultes
+    jour: à compléter
+    heure: à compléter
+    public: Adultes
