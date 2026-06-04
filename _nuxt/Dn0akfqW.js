@@ -1,0 +1,1 @@
+import{_ as t}from"./OIQBYRHA.js";import{_ as e}from"./DlAUqK2U.js";import{K as r,c as n}from"./C2uPMmIY.js";import"./DOM531Bb.js";import"./Cd4TPMnW.js";import"./DIYTdOnI.js";import"./BCyOuqtS.js";const c={};function _(a,p){const o=t;return n(),r(o,{path:"/pages/notre-salle"})}const d=e(c,[["render",_]]);export{d as default};
